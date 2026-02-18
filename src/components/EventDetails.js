@@ -1,13 +1,12 @@
-import React from "react";
+export default function EventDetails({ event }) {
+  if (!event) return null;
 
-function EventDetails({ title, date, location }) {
   return (
-    <div className="eventDetails">
-      <h1 className="eventTitle">{title}</h1>
-      <p className="eventText">{date}</p>
-      <p className="eventText">{location}</p>
+    <div>
+      <h2>{event.title}</h2>
+      <p><b>Дата:</b> {event.date}</p>
+      <p><b>Место:</b> {event.venue}</p>
+      <p>{event.description}</p>
     </div>
   );
 }
-
-export default EventDetails;
