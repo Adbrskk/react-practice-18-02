@@ -1,0 +1,77 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efefef;
+  font-family: Arial, sans-serif;
+}
+
+/* карточка */
+.card {
+  width: 760px;
+  padding: 55px 65px;
+  background: #a7d7da;
+  border: 10px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* блок с инфой */
+.eventDetails {
+  margin-bottom: 22px;
+}
+
+.eventTitle {
+  color: #0a33ff;
+  font-size: 48px;
+  margin: 0 0 25px 0;
+  font-weight: 800;
+}
+
+.eventText {
+  color: #0a33ff;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* места */
+.seatsRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.seatBtn {
+  width: 58px;
+  height: 36px;
+  border: 2px solid #333;
+  background: #bcbcbc;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.seatSelected {
+  background: #7fb37f;
+}
+
+.selectedText {
+  margin-top: 18px;
+  color: #0a33ff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.actions {
+  margin-top: 16px;
+}
+
+.clearBtn {
+  padding: 10px 14px;
+  border: 2px solid #333;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+}

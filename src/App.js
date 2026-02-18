@@ -1,5 +1,13 @@
+import React from "react";
 import EventBooking from "./components/EventBooking";
+import "./styles.css";
 
-export default function App() {
-  return <EventBooking />;
+function App() {
+  return (
+    <div className="page">
+      <EventBooking />
+    </div>
+  );
 }
+
+export default App;

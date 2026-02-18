@@ -1,33 +1,30 @@
-export default function SeatSelector({ seats, selectedSeatIds, onToggleSeat }) {
-  return (
-    <div>
-      <h3>Выбор мест</h3>
+import React from "react";
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 8 }}>
+function SeatSelector({ seats, selectedSeats, onToggleSeat }) {
+  return (
+    <div className="seatsBlock">
+      <div className="seatsRow">
         {seats.map((seat) => {
-          const selected = selectedSeatIds.includes(seat.id);
+          const isSelected = selectedSeats.includes(seat);
 
           return (
             <button
-              key={seat.id}
+              key={seat}
               type="button"
-              disabled={seat.isBooked}
-              onClick={() => onToggleSeat(seat.id)}
-              style={{
-                padding: "10px 6px",
-                borderRadius: 8,
-                border: "1px solid #ccc",
-                cursor: seat.isBooked ? "not-allowed" : "pointer",
-                opacity: seat.isBooked ? 0.5 : 1,
-                background: selected ? "#d1fae5" : "white",
-              }}
-              title={seat.isBooked ? "Занято" : selected ? "Выбрано" : "Свободно"}
+              className={isSelected ? "seatBtn seatSelected" : "seatBtn"}
+              onClick={() => onToggleSeat(seat)}
             >
-              {seat.label}
+              {seat}
             </button>
           );
         })}
       </div>
+
+      <p className="selectedText">
+        Selected Seats: {selectedSeats.length ? selectedSeats.join(", ") : "—"}
+      </p>
     </div>
   );
 }
+
+export default SeatSelector;
