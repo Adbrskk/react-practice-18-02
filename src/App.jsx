@@ -1,5 +1,5 @@
 import React from "react";
-import EventBooking from "./components/EventBooking";
+import EventBooking from './components/EventBooking/EventBooking.jsx';
 import "./styles.css";
 
 function App() {

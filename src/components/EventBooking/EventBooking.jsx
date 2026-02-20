@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import EventDetails from "./EventDetails";
-import SeatSelector from "./SeatSelector";
+import EventDetails from "../EventDetails/EventDetails.jsx";
+import SeatSelector from "../SeatSelector/SeatSelector.jsx";
 
 function EventBooking() {
   const event = {
