@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react';
-import EventDetails from './EventDetails';
-import SeatSelector from './SeatSelector';
+import { useMemo, useState } from "react";
+import EventDetails from "../EventDetails";
+import SeatSelector from "../SeatSelector";
 
 function formatDateKey(d) {
   const dt = new Date(d);
