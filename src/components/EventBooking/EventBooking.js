@@ -40,7 +40,6 @@ export default function EventBooking({ eventsData = [] }) {
 
   const selectedEvent = dayEvents.find((e) => e.id === selectedEventId);
 
-  // ВАЖНО: состояние мест — только здесь
   const [seatsByEvent, setSeatsByEvent] = useState(() => {
     const map = new Map();
     for (const day of eventsData) {
