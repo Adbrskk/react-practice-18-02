@@ -24,6 +24,7 @@ export default function EventBooking({ eventsData = [] }) {
       events: d.events || [],
     }));
   }, [eventsData]);
+  
 
   const [selectedDateKey, setSelectedDateKey] = useState(availableDates[0]?.key || '');
   const selectedDay = availableDates.find((d) => d.key === selectedDateKey);
